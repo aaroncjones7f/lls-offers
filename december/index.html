@@ -109,7 +109,7 @@ footer a{color:var(--ink);font-weight:700}
 </head>
 <body>
 <header class="bar"><div class="wrap bar-in">
-  <a class="brand" href="/" aria-label="Little Lamb Studio"><img src="../shared/logo.png" alt="" width="40" height="40"><span><b>Little Lamb Studio</b><small>小羊教室 · Tsing Yi 青衣</small></span></a>
+  <a class="brand" href="/" aria-label="Little Lamb Studio"><img src="../shared/logo.png" alt="" width="40" height="40"><span><b>Little Lamb Studio</b><small data-t="loc"></small></span></a>
   <div class="lang" role="group" aria-label="Language 語言"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="zh" aria-pressed="false">中文</button></div>
 </div></header>
 
@@ -118,7 +118,6 @@ footer a{color:var(--ink);font-weight:700}
   <div>
     <p class="kicker" data-t="kicker"></p>
     <h1 data-t="title"></h1>
-    <p class="zh">十二月課程九折</p>
     <p class="lead" data-t="lead"></p>
     <div class="cta">
       <a class="btn btn-wa wa" href="#" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span data-t="book"></span></a>
@@ -162,10 +161,12 @@ footer a{color:var(--ink);font-weight:700}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>Little Lamb Studio 小羊教室 · Villa Esplanada, Tsing Yi 青衣灝景灣</span><a class="wa" href="#" target="_blank" rel="noopener">WhatsApp 6045 9922</a></div></footer>
+<footer><div class="wrap"><span data-t="addr"></span><a class="wa" href="#" target="_blank" rel="noopener">WhatsApp 6045 9922</a></div></footer>
 
 <script>
 var T={
+loc:{en:'Tsing Yi',zh:'小羊教室 · 青衣'},
+addr:{en:'Little Lamb Studio · Villa Esplanada, Tsing Yi',zh:'小羊教室 · 青衣灝景灣'},
 kicker:{en:'December offer · Winter break',zh:'十二月優惠 · 聖誕假期'},
 title:{en:'10% off December classes',zh:'十二月課程九折'},
 lead:{en:'Make the winter break count. Art, English, maths and music in small groups at our Tsing Yi studio, with 10% off every class in December.',zh:'讓聖誕假期過得充實。美術、英文、數學及音樂小班課，地點青衣灝景灣，十二月所有課程一律九折。'},

@@ -34,7 +34,9 @@
     $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     $('#dlTop').href = 'pdf/LLS_10-Minute_Learning_' + (lang === 'zh' ? 'ZH' : 'EN') + '.pdf';
     $('#facts').innerHTML = tx(U.facts).map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('');
-    $('#trialBtn').href = 'https://wa.me/85260459922?text=' + encodeURIComponent('TRIAL 試堂');
+    var trialHref = 'https://wa.me/85260459922?text=' + encodeURIComponent(tx(U.trialMsg));
+    $('#trialBtn').href = trialHref;
+    $$('.print-wa').forEach(function (el) { el.href = trialHref; });
     $('#chips').setAttribute('aria-label', tx(U.whereTitle));
     $('#days').setAttribute('aria-label', tx(U.weekTitle));
   }

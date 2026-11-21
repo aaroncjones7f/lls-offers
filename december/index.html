@@ -154,7 +154,7 @@ footer a{color:var(--ink);font-weight:700}
 
 <section class="band"><div class="wrap">
   <div class="extras">
-    <div class="extra x-trial"><p class="kicker" data-t="trK"></p><h3 data-t="trT"></h3><p data-t="tr"></p></div>
+    <div class="extra x-trial"><p class="kicker" data-t="trK"></p><h3 data-t="trT"></h3><p data-t="tr"></p><a class="btn btn-wa wa-trial" href="#" target="_blank" rel="noopener" style="margin-top:var(--s3);color:#fff"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span data-t="trB"></span></a></div>
     <div class="extra x-pack"><p class="kicker" data-t="pkK"></p><h3 data-t="pkT"></h3><p data-t="pk"></p><a href="/pack/" data-t="pkL"></a></div>
   </div>
   <div class="terms" style="margin-top:clamp(2.5rem,5vw,3.5rem)"><h2 data-t="tmT"></h2><ul id="terms"></ul></div>
@@ -204,6 +204,8 @@ pkK:{en:'Free for parents',zh:'家長免費索取'},
 pkT:{en:'10-Minute Learning at Home',zh:'每天10分鐘在家學習'},
 pk:{en:'20 simple activities for the days at home, for K2 to P2.',zh:'20個在家親子小活動，適合K2至P2。'},
 pkL:{en:'Get the free pack',zh:'免費索取學習包'},
+trB:{en:'Book a 50% off trial',zh:'WhatsApp預約半價試堂'},
+trMsg:{en:'Hi, I saw the December offer and I’d like to book a 50% off trial class.',zh:'你好，我看到十二月優惠，想預約半價試堂。'},
 tmT:{en:'The small print',zh:'條款'},
 waMsg:{en:'Hi, I saw the December offer and I’d like to book December classes with 10% off.',zh:'你好，我看到十二月九折優惠，想預約十二月課程。'}
 };
@@ -226,6 +228,7 @@ var CL=[
   document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===lang))});
   var href='https://wa.me/85260459922?text='+encodeURIComponent(T.waMsg[lang]);
   document.querySelectorAll('a.wa').forEach(function(a){a.href=href});
+  document.querySelectorAll('a.wa-trial').forEach(function(a){a.href='https://wa.me/85260459922?text='+encodeURIComponent(T.trMsg[lang])});
   document.getElementById('classList').innerHTML=CL.map(function(c){return '<article class="cls c-'+c.c+'"><img src="img/'+c.img+'" alt="" width="900" height="600"><div class="tx"><h3>'+esc(c.t[lang])+'</h3><ul>'+c.i.map(function(x){return '<li>'+esc(x[lang])+'</li>'}).join('')+'</ul></div></article>'}).join('');
   document.getElementById('terms').innerHTML=TERMS[lang].map(function(x){return '<li>'+esc(x)+'</li>'}).join('');
  }
